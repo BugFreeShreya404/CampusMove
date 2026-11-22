@@ -62,7 +62,7 @@ The application demonstrates real-world IoT-based workflows using simulated sens
 ### Login
 
 <p align="center">
-  <img src="screenshots/login.png" width="85%" alt="CampusMove Login Page">
+  <img src="screenshots/login.png" width="100%" alt="CampusMove Login Page">
 </p>
 
 ### Live Campus Map
