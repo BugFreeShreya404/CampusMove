@@ -1,0 +1,24 @@
+campus.db*
+__pycache__/
+*.pyc
+.venv/
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# IDE and OS files
+.vscode/
+.DS_Store
+
+# Logs
+*.log

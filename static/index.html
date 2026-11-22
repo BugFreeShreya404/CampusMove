@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0d1520">
+<title>CampusMove – Parking & Transport Locator</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="car" viewBox="0 0 64 32">
+    <g fill="#17242f"><rect x="11" y="2" width="11" height="5" rx="1.5"/><rect x="11" y="25" width="11" height="5" rx="1.5"/>
+      <rect x="41" y="2" width="11" height="5" rx="1.5"/><rect x="41" y="25" width="11" height="5" rx="1.5"/></g>
+    <rect x="3" y="6" width="58" height="20" rx="9" fill="#fff"/>
+    <path d="M10 10h6v12h-6a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z" fill="#2b3d4f"/>
+    <rect x="18" y="9" width="18" height="14" rx="3" fill="#dfe7ee"/>
+    <path d="M38 9.5l9 1.8a3 3 0 0 1 2.4 2.9v3.6a3 3 0 0 1-2.4 2.9L38 22.5z" fill="#2b3d4f"/>
+    <circle cx="58" cy="10.5" r="1.7" fill="#ffd54a"/><circle cx="58" cy="21.5" r="1.7" fill="#ffd54a"/>
+    <rect x="3.5" y="9" width="2" height="3.4" rx=".8" fill="#e53935"/><rect x="3.5" y="19.6" width="2" height="3.4" rx=".8" fill="#e53935"/>
+  </symbol></defs></svg>
+<div id="app">
+  <header id="top" hidden>
+    <div class="brand"><span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/></svg></span>
+      <div><b>CampusMove</b><small>Parking &amp; Transport Locator</small></div></div>
+    <nav id="nav" aria-label="Main"></nav>
+    <div class="who">
+      <button class="icon-btn" id="bell" data-act="goAlerts" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 22a2.2 2.2 0 0 0 2.2-2.2h-4.4A2.2 2.2 0 0 0 12 22zm6.5-6.3V11a6.5 6.5 0 0 0-5-6.3V4a1.5 1.5 0 0 0-3 0v.7a6.5 6.5 0 0 0-5 6.3v4.7L4 17.5V19h16v-1.5z" fill="currentColor"/></svg>
+        <span class="badge" id="bellBadge" hidden>0</span></button>
+      <div class="user"><span id="userName"></span><small id="userRole"></small></div>
+      <button class="btn ghost sm" data-act="logout">Log out</button>
+    </div>
+  </header>
+  <div id="simBanner" class="sim-banner" hidden><b>SIMULATION NOTICE</b> Parking sensors, bus GPS, payments and push alerts in this prototype are <b>simulated</b> – no live hardware, bank or map API is connected.</div>
+  <main id="view"></main>
+  <footer id="foot" hidden><span id="conn" class="dot ok"></span> <span id="connText">Connected</span> · data refreshes every 3 s</footer>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
